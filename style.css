@@ -206,6 +206,86 @@ body {
     margin-top: auto; 
 }
 
+
+
+/*  UNDERSIDOR: TJÄNSTER */
+.services-page-hero {
+    padding: 10px 4% 40px 4%;
+}
+
+.services-hero-content {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.45), rgba(0, 0, 0, 0.45)), url('bilder/tjanster-bg.avif');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 20px;
+    padding: 80px 40px;
+    text-align: center;
+}
+
+.services-hero-content h1 {
+    color: #F5F1EA;
+    font-size: 40px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    margin-bottom: 15px;
+}
+
+.services-hero-content p {
+    color: #F5F1EA;
+    font-size: 16px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-container {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+.service-row {
+    display: flex;
+    align-items: center;
+    gap: 50px;
+    margin-bottom: 60px;
+}
+
+/* Det här tricket gör att varannat kort spegelvänds på datorn! */
+.service-row.reverse {
+    flex-direction: row-reverse;
+}
+
+.service-image {
+    flex: 1;
+    height: 300px;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.service-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.service-text {
+    flex: 1;
+}
+
+.service-text h2 {
+    font-size: 26px;
+    margin-bottom: 10px;
+}
+
+.price {
+    font-weight: bold;
+    color: #7B8A65;
+    margin-bottom: 15px;
+}
+
+
+
 /*  6. MOBIL-RESPONSIVITET  */
 @media (max-width: 768px) {
     .nav-links {
@@ -265,5 +345,19 @@ body {
     .news-section h2 {
         padding-left: 20px;
         font-size: 22px;
+    }
+
+
+
+    /* Mobilanpassning för Tjänster-sidan */
+    .service-row, .service-row.reverse {
+        flex-direction: column; /* Stapla bild och text vertikalt */
+        gap: 20px;
+        margin-bottom: 40px;
+    }
+
+    .service-image {
+        width: 100%;
+        height: 200px; /* Lite lägre höjd på mobil */
     }
 }
