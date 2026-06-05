@@ -1,0 +1,263 @@
+/* ==========================================================================
+   1. GRUNDSTYLING
+   ========================================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #F5F1EA; /* Din FärgBakgrund */
+    color: #3E4A3F;            /* Din Mörka text */
+    line-height: 1.5;
+    
+    /* HÄR ÄR TRICKET FÖR ATT TRYCKA NER FOOTERN: */
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Gör att sidan alltid är minst lika hög som skärmen */
+}
+/* ==========================================================================
+   2. HEADER & NAVIGATION
+   ========================================================================== */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 8%;
+    background-color: #F5F1EA;
+}
+
+.logo {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.nav-links li {
+    margin-left: 25px;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #3E4A3F;
+    font-size: 15px;
+}
+
+.btn-boka {
+    background-color: #3E4A3F; /* Din Mörka text som knapp */
+    color: #F5F1EA !important;
+    padding: 8px 20px;
+    text-transform: lowercase;
+}
+
+.menu-toggle {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+/* ==========================================================================
+   3. HERO-SEKTION (Grå platta med runda hörn)
+   ========================================================================== */
+.hero-section {
+    padding: 10px 4% 40px 4%;
+}
+
+.hero-container {
+    background-color: #DCE3D3; /* Din Ljus gröna / gråa platta */
+    border-radius: 20px;       /* Runda hörn från din skiss */
+    padding: 60px 40px;
+    text-align: center;
+}
+
+.hero-container h1 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.hero-container p {
+    font-size: 16px;
+    max-width: 600px;
+    margin: 0 auto 25px auto;
+}
+
+.btn-hero {
+    display: inline-block;
+    background-color: #7B8A65; /* Din Accent grön */
+    color: #F5F1EA;
+    padding: 6px 20px;
+    text-decoration: none;
+    font-size: 12px;
+    text-transform: lowercase;
+}
+
+/* ==========================================================================
+   4. KORT & LAYOUT (Gemensam för Event och Nyheter)
+   ========================================================================== */
+.scroll-container {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 4%;
+}
+
+/* Event-kort */
+.events-section {
+    padding: 30px 0;
+}
+
+.event-card {
+    background-color: #DCE3D3; /* Ljusgrå/grön platta */
+    padding: 30px 20px;
+    flex: 1;
+    max-width: 300px;
+    text-align: center; /* Centrerar texten inuti kortet */
+}
+
+.circle-icon {
+    width: 60px;
+    height: 60px;
+    background-color: #3E4A3F; /* Mörka runda cirkeln */
+    border-radius: 50%;
+    margin: 0 auto 20px auto; /* HÄR: Sätter cirkeln exakt i mitten */
+}
+
+.event-card h3, .news-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.event-card p, .news-card p {
+    font-size: 13px;
+    margin-bottom: 15px;
+}
+
+.arrow-link {
+    color: #3E4A3F;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+/* Nyhetskort */
+.news-section {
+    padding: 40px 0;
+}
+
+.news-section h2 {
+    padding-left: 8%;
+    margin-bottom: 25px;
+    font-size: 24px;
+}
+
+.news-card {
+    background-color: #DCE3D3;
+    padding: 20px;
+    border-radius: 15px; /* Rundade hörn på nyhetskorten */
+    flex: 1;
+    max-width: 300px;
+}
+
+.image-placeholder {
+    background-color: #3E4A3F; /* Det mörka bildfältet */
+    height: 140px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    font-size: 11px;
+    color: #666;
+    margin-bottom: 10px;
+
+}
+
+/* ==========================================================================
+   5. FOOTER
+   ========================================================================== */
+.main-footer {
+    background-color: #DCE3D3;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+    
+    /* HÄR ÄR TRICKET: */
+    margin-top: auto; /* Säger till flexbox att trycka ner footern maximalt */
+}
+
+/* ==========================================================================
+   6. MOBIL-RESPONSIVITET (Exakt som din bild)
+/* ==========================================================================
+   6. MOBIL-RESPONSIVITET (Exakt som din bild)
+   ========================================================================== */
+@media (max-width: 768px) {
+    .nav-links {
+        display: none;
+    }
+    
+    .menu-toggle {
+        display: block;
+    }
+
+    /* Hero-texten görs smalare och mer kompakt på mobilen */
+    .hero-section {
+        padding: 40px 6%; /* Mer marginal på sidorna */
+    }
+
+    .hero-container {
+        padding: 40px 20px;
+    }
+
+    .hero-container h1 {
+        font-size: 28px;
+        max-width: 90%;     /* Gör rubriken smalare */
+        margin: 0 auto 15px auto;
+    }
+
+    .hero-container p {
+        font-size: 14px;
+        max-width: 85%;     /* Gör brödtexten smalare så den bryts snyggt */
+        margin: 0 auto 20px auto;
+    }
+
+    /* Gör raderna skrollbara i sidled på mobilen */
+    .scroll-container {
+        justify-content: flex-start;
+        overflow-x: auto;
+        scroll-snap-type: x mandatory;
+        padding: 10px 20px 30px 20px; /* Justerad padding */
+        gap: 15px;
+    }
+    
+    .scroll-container::-webkit-scrollbar {
+        display: none; /* Gömmer skroll-listen */
+    }
+
+    .event-card, .news-card {
+        min-width: 260px; /* Stabil bredd på mobilkorten */
+        scroll-snap-align: center; /* Snäpper fast kortet i mitten vid skroll */
+    }
+
+    /* Smalare och mer balanserad text inuti korten på mobil */
+    .event-card p, .news-card p {
+        max-width: 90%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .news-section h2 {
+        padding-left: 20px;
+        font-size: 22px;
+    }
+}
