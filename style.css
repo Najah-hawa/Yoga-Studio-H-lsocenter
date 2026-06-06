@@ -50,22 +50,6 @@ body {
     letter-spacing: 0.5px; 
 }
 
-.nav-links {
-    display: flex;
-    list-style: none;
-    align-items: center;
-}
-
-.nav-links li {
-    margin-left: 25px;
-}
-
-.nav-links a {
-    text-decoration: none;
-    color: #3E4A3F;
-    font-size: 15px;
-}
-
 .btn-boka {
     background-color: #3E4A3F; 
     color: #F5F1EA !important;
@@ -831,4 +815,68 @@ body {
         padding: 25px;
     }
     
+}
+
+@media (max-width: 768px) {
+    .nav-links {
+        display: none; 
+        flex-direction: column;
+        width: 100%;
+        background-color: #F5F1EA; /* beige bakgrund */
+        position: absolute;
+        top: 70px;                 /* Justera så den landar precis under header-kant */
+        left: 0;
+        padding: 10px 0;           /* Skapar lite luft i över- och underkant av menyn */
+        box-shadow: 0px 8px 16px rgba(0,0,0,0.05); /* En mjuk skugga under menyn */
+        z-index: 1000;             /* Säkerställer att menyn lägger sig ovanpå allt annat innehåll */
+    }
+
+    /* Visa menyn när den är aktiv (via JS) */
+    .nav-links.active {
+        display: flex;
+    }
+
+    /* STYLING FÖR VARJE LISTELEMENT (MENYVAL) PÅ MOBILEN */
+    .nav-links li {
+        width: 100%;              
+        text-align: center;        /* Centrerar texten elegant */
+        border-bottom: 1px solid rgba(62, 74, 63, 0.1); /* En jättetunn, mjukgrön linje mellan valen */
+    }
+
+    /* Ta bort den sista linjen under det sista menyvalet (Boka-knappen) */
+    .nav-links li:last-child {
+        border-bottom: none;
+    }
+
+    /* STYLING FÖR SJÄLVA LÄNKARNA */
+    .nav-links li a {
+        display: block;            /* Gör hela raden klickbar */
+        padding: 15px 0;           /* Skapar ett stort och skönt klickbart område */
+        color: #3E4A3F;            /*  mörkgröna textfärg */
+        font-size: 18px;           /* Gör texten lite större och tydligare på mobilen */
+        font-weight: 500;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    /* Effekt när man trycker/hovrar på ett menyval på mobilen */
+    .nav-links li a:hover,
+    .nav-links li a:active {
+        background-color: rgba(62, 74, 63, 0.05); /* En supertunn grön skiftning vid tryck */
+        color: #7B8A65;            /* Ändrar texten till accentgröna färg */
+    }
+
+    /* FIXA TILL BOKA-KNAPPEN SÅ DEN PASSAR IN I MOBILMENYN */
+    .nav-links li a.btn-boka {
+        background-color: #7B8A65; /* gröna färg */
+        color: #FFFFFF !important; /* Vit text så det syns bra */
+        margin: 10px auto;         /* Skapar lite distans till knappen */
+        width: 80%;                /* Gör knappen lite smalare än de andra raderna */
+        border-radius: 25px;       /* Runda, mjuka hörn som passar yoga-temat */
+        padding: 12px 0;
+    }
+    
+    .nav-links li a.btn-boka:hover {
+        background-color: #3E4A3F; /* Blir mörkgrön när man hovrar */
+    }
 }
