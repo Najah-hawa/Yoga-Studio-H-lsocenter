@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="sv">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boka klass - Yoga Studio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER (Samma som tidigare) -->
+    <header class="main-header">
+        <div class="logo">🧘‍♂️ Yoga Studio Hälsocenter</div>
+        <nav class="main-nav">
+            <div class="menu-toggle">☰</div>
+            <ul class="nav-links">
+                <li><a href="index.html">Hem</a></li>
+                <li><a href="om-oss.html">Om oss</a></li>
+                <li><a href="tjanster.html">Tjänster</a></li>
+                <li><a href="nyheter.html">Nyheter</a></li>
+                <li><a href="boka.html" class="btn-boka active">boka</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- UNIK HERO-SEKTION FÖR BOKNING -->
+    <section class="booking-page-hero">
+        <div class="booking-hero-content">
+            <h1>Boka din nästa klass</h1>
+            <p>Investera i din egen tid och hälsa. Välj den klass som passar ditt schema bäst och fyll i formuläret nedan för att säkra din plats.</p>
+        </div>
+    </section>
+
+    <!-- BOKNINGSFORMULÄR & INFORMATION -->
+    <section class="booking-section">
+        <div class="booking-container">
+            
+            <!-- VÄNSTERKOLUMN: FORMULÄR -->
+            <div class="booking-form-wrapper">
+                <h2>Bokningsförfrågan</h2>
+                <form action="#" method="POST" class="booking-form">
+                    
+                    <div class="form-group">
+                        <label for="name">Namn *</label>
+                        <input type="text" id="name" name="name" placeholder="Ditt för- och efternamn" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="email">E-postadress *</label>
+                        <input type="email" id="email" name="email" placeholder="namn@exempel.se" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="class-select">Välj klass eller tjänst *</label>
+                        <select id="class-select" name="class" required>
+                            <option value="" disabled selected>Välj ett alternativ...</option>
+                            <option value="vinyasa">Vinyasa Flow (150 kr)</option>
+                            <option value="yin">Yin Yoga & Meditation (150 kr)</option>
+                            <option value="privat">Privat Yogalektion (750 kr)</option>
+                            <option value="workshop">Höst-Retreat / Workshop</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Välj datum *</label>
+                        <input type="date" id="date" name="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="message">Meddelande eller önskemål (Valfritt)</label>
+                        <textarea id="message" name="message" rows="4" placeholder="Har du några skador, graviditet eller annat vi bör känna till?"></textarea>
+                    </div>
+
+                    <button type="submit" class="btn-submit">Bekräfta bokning</button>
+                </form>
+            </div>
+
+            <!-- HÖGERKOLUMN: PRAKTISK INFO -->
+            <div class="booking-info">
+                <h3>Viktig information</h3>
+                <ul class="info-list">
+                    <li><strong>Avbokning:</strong> Måste ske senast 24 timmar innan klassens start, annars utgår full debitering.</li>
+                    <li><strong>Kom i tid:</strong> Dörrarna låses precis när klassen startar för att inte störa lugnet i salen. Kom gärna 10–15 minuter innan.</li>
+                    <li><strong>Utrustning:</strong> Mattor och block finns att låna på plats gratis, men du får självklart ta med din egen matta om du föredrar det.</li>
+                </ul>
+                
+                <div class="contact-box">
+                    <h4>Behöver du hjälp?</h4>
+                    <p>Kontakta oss på info@yogastudio.se eller ring oss på 070-123 45 67 om du har frågor om din bokning.</p>
+                </div>
+            </div>
+
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="main-footer">
+        <p>Yoga. Balance. Närvaro</p>
+    </footer>
+
+</body>
+</html>
