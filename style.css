@@ -24,8 +24,30 @@ body {
 }
 
 .logo {
-    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+/* Gör så att länken håller ihop både bild och text på en rad */
+.logo a {
+    display: flex;
+    align-items: center;
+    text-decoration: none; /* Tar bort understrykning på texten */
+    gap: 12px;             /* Skapar ett perfekt avstånd mellan bilden och texten */
+}
+
+.logo-img {
+    height: 45px;      
+    width: auto;
+    display: block;
+}
+
+/* Stylingen för företagets namn bredvid symbolen */
+.logo-text {
+    font-size: 20px;
     font-weight: bold;
+    color: #3E4A3F;       
+    letter-spacing: 0.5px; 
 }
 
 .nav-links {
@@ -697,6 +719,16 @@ body {
     
     .menu-toggle {
         display: block;
+    }
+
+    /* Gömmer texten på mobilen om skärmen är för smal */
+    .logo-text {
+        display: none; 
+    }
+    
+    /* Gör symbolen lite mindre på mobilen så den sitter perfekt */
+    .logo-img {
+        height: 38px;
     }
 
     /* Hero-texten görs smalare och mer kompakt på mobilen */
