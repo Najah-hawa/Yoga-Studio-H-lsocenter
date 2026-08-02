@@ -3,6 +3,7 @@
 Detta projekt är en del av en akademisk examinationsuppgift där målet har varit att planera, designa och utveckla en modern, tillgänglig och responsiv webbplats för ett fiktivt företag inom hälsa och välmående. Projektet har tagits fram i två huvudsakliga steg: en visuell designfas i Figma och en teknisk prototypfas i semantisk HTML och CSS, redo att transformeras till ett dynamiskt WordPress-tema.
 
 ---
+ **Converted WordPress Theme Repository:** [https://github.com/Najah-hawa/Yoga_wordpress](https://github.com/Najah-hawa/Yoga_wordpress)
 
 ## 📋 Lärarens krav (Grundkrav & Funktionalitet)
 
